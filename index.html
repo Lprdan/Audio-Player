@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Música</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="player">
+        <div class="album-cover">
+            <img src="icons/lenobrega.png" alt="Capa do álbum">
+        </div>
+        <div class="song-info">
+            <h3>Trepada em Cuiabá</h3>
+            <p>Leno Brega</p>
+        </div>
+        <div class="time-control">
+            <span class="current-time">0:00</span>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="duration">0:00</span>
+        </div>
+        <div class="controls">
+            <button id="prev"><i class="fas fa-backward"></i></button>
+            <button id="play"><i class="fas fa-play"></i></button>
+            <button id="next"><i class="fas fa-forward"></i></button>
+        </div>
+        <audio id="audio" src="audios/lenobrega-cuiaba.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
