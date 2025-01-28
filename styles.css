@@ -19,9 +19,12 @@
 
 body {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background: var(--background-color);
     font-family: 'Segoe UI', sans-serif;
+    align-items: center;
+    padding: 20px 0;
 }
 
 
@@ -29,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    margin: auto;
+    margin: 0 auto;
     padding: 1.5rem;
     width: min(90%, 400px);
     background: var(--player-bg);
@@ -186,25 +189,30 @@ button:active {
 
 
 .signature {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    text-align: center;
+    padding: 15px 0;
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    margin-top: 20px;
 }
 
 .signature:hover {
     opacity: 1;
 }
 
-
-@media (max-height: 700px) {
+@media (min-width: 768px) {
     .signature {
-        position: relative;
-        margin-top: 20px;
-        text-align: center;
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-height: 600px) {
+    .signature {
+        margin-top: 10px;
+        padding: 10px 0;
     }
 } 
